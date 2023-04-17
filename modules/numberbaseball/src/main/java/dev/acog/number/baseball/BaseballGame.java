@@ -28,7 +28,7 @@ public class BaseballGame {
         System.out.print("숫자 4 가지를 입력하세요 : ");
         String input = NumberBaseball.scanner.nextLine();
         List<Integer> numbers = parseInputString(input);
-        if (numbers.size() != 4) {
+        if (numbers.size() != GameNumber.BALL_NUMBER_SIZE) {
             throw new IllegalArgumentException("잘못 입력 하셨습니다. 숫자 4개를 입력하세요");
         }
         return validateAnswer(numbers);
