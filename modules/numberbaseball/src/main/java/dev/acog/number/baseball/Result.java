@@ -1,23 +1,15 @@
 package dev.acog.number.baseball;
 
-public interface Result {
+public enum Result {
+    STRIKE(1),
+    BALL(0),
+    OUT(0)
+    ;
 
-    class Strike implements Result {
+    public final int index;
+
+    Result(int index) {
+        this.index = index;
     }
 
-    class Ball implements Result {
-    }
-
-    class Fail implements Result {
-    }
-
-    static String convent(Result result) {
-        if (result instanceof Strike) {
-            return "STRIKE";
-        } else if (result instanceof Ball) {
-            return "BALL";
-        } else {
-            return "FAIL";
-        }
-    }
 }
